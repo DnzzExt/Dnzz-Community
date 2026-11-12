@@ -1,0 +1,262 @@
+
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Dnzz Store</title>
+
+<style>
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background: #080808;
+  color: white;
+  font-family: Arial, sans-serif;
+}
+
+header {
+  background: #151515;
+  text-align: center;
+  padding: 25px 10px;
+  border-bottom: 2px solid red;
+}
+
+header h1 {
+  color: red;
+  font-size: 32px;
+}
+
+header p {
+  color: #aaa;
+  margin-top: 12px;
+  font-size: 14px;
+}
+
+.hero {
+  text-align: center;
+  padding: 85px 15px;
+  background: linear-gradient(120deg,#550000,#160000,#080808);
+}
+
+.hero h2 {
+  font-size: 30px;
+  margin-bottom: 20px;
+}
+
+.hero span {
+  color: red;
+}
+
+.hero p {
+  color: #bbb;
+  font-size: 18px;
+  margin-bottom: 25px;
+}
+
+.btn {
+  display: inline-block;
+  background: red;
+  color: white;
+  padding: 17px 30px;
+  border-radius: 12px;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.container {
+  padding: 25px 15px;
+  max-width: 1100px;
+  margin: auto;
+}
+
+.judul {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.judul h2 {
+  font-size: 21px;
+}
+
+.toggle {
+  background: #292929;
+  color: white;
+  border: 1px solid #555;
+  padding: 11px 14px;
+  border-radius: 8px;
+  font-weight: bold;
+}
+
+.produk {
+  display: grid;
+  grid-template-columns: repeat(2,minmax(0,1fr));
+  gap: 13px;
+}
+
+.card {
+  background: #191919;
+  border: 1px solid #393939;
+  border-radius: 15px;
+  overflow: hidden;
+  text-align: center;
+}
+
+.card img {
+  width: 100%;
+  aspect-ratio: 16/9;
+  object-fit: cover;
+  display: block;
+}
+
+.isi {
+  padding: 15px 9px;
+}
+
+.card h3 {
+  font-size: 15px;
+  min-height: 55px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.harga {
+  color: #00e66b;
+  font-size: 23px;
+  font-weight: bold;
+  margin: 15px 0;
+}
+
+.order {
+  display: block;
+  background: #00bd50;
+  color: white;
+  text-decoration: none;
+  padding: 13px 5px;
+  border-radius: 9px;
+  font-weight: bold;
+  font-size: 13px;
+}
+
+footer {
+  text-align: center;
+  padding: 40px 10px 65px;
+  color: #888;
+  line-height: 2;
+}
+
+[hidden] {
+  display: none !important;
+}
+
+@media(max-width:350px) {
+  .produk {
+    grid-template-columns: 1fr;
+  }
+}
+</style>
+</head>
+
+<body>
+
+<header>
+  <h1>DNZZ STORE</h1>
+  <p>GTA SA-MP MODIFICATION STORE</p>
+</header>
+
+<section class="hero">
+  <h2>WELCOME TO <span>DNZZ STORE</span></h2>
+  <p>Website resmi Dnzz Community</p>
+  <a href="#produk" class="btn">LIHAT PRODUK</a>
+</section>
+
+<div class="container" id="produk">
+
+  <div class="judul">
+    <h2>DAFTAR MODPACK</h2>
+    <button class="toggle" onclick="toggleProduk()" id="tombol">
+      TUTUP PRODUK
+    </button>
+  </div>
+
+  <div class="produk" id="daftar">
+
+    <!-- PRODUK 1 -->
+    <div class="card">
+      <img src="foto1.jpg" alt="Modpack Gangster">
+      <div class="isi">
+        <h3>MODPACK GANGSTER FOR SHALE</h3>
+        <div class="harga">Rp10.000</div>
+        <a class="order" href="https://wa.me/6285865278854?text=Halo%20Dnzz%20saya%20mau%20order%20Modpack%20Gangster%20for%20Shale">
+          ORDER SEKARANG
+        </a>
+      </div>
+    </div>
+
+    <!-- PRODUK 2 -->
+    <div class="card">
+      <img src="foto2.jpg" alt="Modpack Kabut PVT">
+      <div class="isi">
+        <h3>MODPACK KABUT PVT</h3>
+        <div class="harga">Rp10.000</div>
+        <a class="order" href="https://wa.me/6285865278854?text=Halo%20Dnzz%20saya%20mau%20order%20Modpack%20Kabut%20PVT">
+          ORDER SEKARANG
+        </a>
+      </div>
+    </div>
+
+    <!-- PRODUK 3 -->
+    <div class="card">
+      <img src="foto3.jpg" alt="Modpack Red Style">
+      <div class="isi">
+        <h3>MODPACK ANDROID PVT RED STYLE</h3>
+        <div class="harga">Rp5.000</div>
+        <a class="order" href="https://wa.me/6285865278854?text=Halo%20Dnzz%20saya%20mau%20order%20Modpack%20Android%20PVT%20Red%20Style">
+          ORDER SEKARANG
+        </a>
+      </div>
+    </div>
+
+    <!-- PRODUK 4 -->
+    <div class="card">
+      <img src="foto4.jpg" alt="CV Modpack">
+      <div class="isi">
+        <h3>CV MODPACK KABUT PVT DNZZ TO ANDRO</h3>
+        <div class="harga">Rp8.000</div>
+        <a class="order" href="https://wa.me/6285865278854?text=Halo%20Dnzz%20saya%20mau%20order%20CV%20Modpack%20Kabut%20PVT%20Dnzz%20to%20Andro">
+          ORDER SEKARANG
+        </a>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<footer>
+  <b>DNZZ STORE</b><br>
+  © 2026 All Rights Reserved
+</footer>
+
+<script>
+function toggleProduk() {
+  const daftar = document.getElementById("daftar");
+  const tombol = document.getElementById("tombol");
+
+  daftar.hidden = !daftar.hidden;
+
+  tombol.innerText = daftar.hidden
+    ? "BUKA PRODUK"
+    : "TUTUP PRODUK";
+}
+</script>
+
+</body>
+</html>
